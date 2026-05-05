@@ -1,0 +1,665 @@
+/* style_cs.css - Site Counter-Strike NSI */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap');
+
+/* --- GENERAL --- */
+body {
+    background-color: #1a1a1a;
+    color: #d4c9a8;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #f0a500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e8c96d;
+}
+
+/* --- TITRES --- */
+h1 {
+    color: #f0a500;
+    font-size: 26pt;
+    border-bottom: 2px solid #f0a500;
+    padding: 8px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 24px 0 20px;
+}
+
+/* h1 dans le header : variante compacte */
+header h1 {
+    font-size: 18pt;
+    border: none;
+    padding: 0;
+    margin: 0;
+    letter-spacing: normal;
+}
+
+h2 {
+    color: #f0a500;
+    font-size: 20pt;
+    border-bottom: 2px solid #f0a500;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #e8c96d;
+    font-size: 14pt;
+}
+
+p {
+    color: #c8b98a;
+    line-height: 1.7;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background-color: #111111;
+    border-bottom: 2px solid #f0a500;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 18px;
+    color: #d4c9a8;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-right: 1px solid #333;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.actif {
+    background-color: #f0a500;
+    color: #111;
+    text-decoration: none;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: #111;
+    padding: 20px 30px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-cs {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0a500;
+    background: #222;
+    border: 2px solid #f0a500;
+    padding: 4px 12px;
+}
+
+header p {
+    color: #666;
+    font-size: 12px;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.contenu {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+/* --- ASIDE --- */
+aside {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 200px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    padding: 15px;
+    font-size: 13px;
+}
+
+aside h3 {
+    font-size: 11pt;
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+    color: #f0a500;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    padding: 4px 0;
+    border-bottom: 1px solid #333;
+    color: #aaa;
+    font-size: 12px;
+}
+
+aside ul li span {
+    color: #f0a500;
+    font-weight: 700;
+}
+
+/* --- TABLEAU --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+table thead {
+    background-color: #f0a500;
+    color: #111;
+}
+
+table thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #333;
+}
+
+table tbody tr:hover {
+    background-color: #2a2a2a;
+}
+
+table tbody td {
+    padding: 9px 14px;
+    color: #c8b98a;
+}
+
+img {
+    max-width: 100%;
+    border: 2px solid #444;
+    border-radius: 4px;
+    display: block;
+    margin: 15px 0;
+}
+
+video {
+    max-width: 100%;
+    border: 2px solid #f0a500;
+    border-radius: 4px;
+    display: block;
+    margin: 15px 0;
+}
+
+footer {
+    background-color: #111;
+    border-top: 2px solid #333;
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    font-size: 12px;
+    font-family: 'Share Tech Mono', monospace;
+    margin-top: 60px;
+}
+
+/* --- CARTE ARME --- */
+.carte-arme {
+    background-color: #222;
+    border: 1px solid #444;
+    border-left: 3px solid #f0a500;
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin: 12px 0;
+}
+
+.carte-arme h3 {
+    margin: 0 0 6px 0;
+    color: #f0a500;
+}
+
+.carte-arme p {
+    margin: 0;
+    font-size: 13px;
+    color: #999;
+}
+
+.badge {
+    display: inline-block;
+    background: #f0a500;
+    color: #111;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    margin-right: 6px;
+}
+
+/* --- CARTE MAP --- */
+.carte-map {
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.carte-map h3 {
+    color: #f0a500;
+    margin-top: 0;
+}
+
+/* ============================================== */
+/* ============= MINI-JEU AIM TRAINER =========== */
+/* ============================================== */
+
+.game-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.game-info-box {
+    background: #222;
+    border: 1px solid #444;
+    border-top: 2px solid #f0a500;
+    border-radius: 4px;
+    padding: 12px;
+    text-align: center;
+}
+
+.game-info-label {
+    font-size: 11px;
+    font-family: 'Share Tech Mono', monospace;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.game-info-val {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f0a500;
+}
+
+.game-area {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    background: linear-gradient(135deg, #2a1f1a 0%, #1a1a1a 50%, #1f1a2a 100%);
+    border: 2px solid #444;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: crosshair;
+    user-select: none;
+}
+
+/* Grille décorative dans le fond */
+.game-area::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(240,165,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240,165,0,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(17,17,17,0.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+}
+
+.game-overlay h2 {
+    color: #f0a500;
+    font-size: 36pt;
+    border: none;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.game-overlay p {
+    color: #aaa;
+    max-width: 400px;
+    margin-bottom: 24px;
+}
+
+.btn-game {
+    background: #f0a500;
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 36px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-game:hover { background: #e8c96d; }
+.btn-game:active { transform: scale(0.97); }
+
+.btn-game.secondaire {
+    background: transparent;
+    border: 2px solid #f0a500;
+    color: #f0a500;
+}
+.btn-game.secondaire:hover { background: #f0a500; color: #111; }
+
+/* Cible */
+.cible {
+    position: absolute;
+    background: radial-gradient(circle, #443333 0%, #221111 70%);
+    border: 2px solid #cc3333;
+    border-radius: 50%;
+    cursor: crosshair;
+    transition: transform 0.08s;
+    box-shadow: 0 0 20px rgba(204,51,51,0.4);
+    animation: cibleApparition 0.15s ease-out;
+}
+
+.cible::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    background: #cc3333;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #cc3333;
+}
+
+.cible:hover { transform: scale(1.05); }
+.cible:active { transform: scale(0.92); }
+
+.cible-tete {
+    position: absolute;
+    top: -32%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, #f0a500 0%, #cc6600 100%);
+    border: 2px solid #ffcc44;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(240,165,0,0.6);
+    cursor: crosshair;
+}
+
+.cible-tete:hover { background: radial-gradient(circle, #ffcc44 0%, #f0a500 100%); }
+
+@keyframes cibleApparition {
+    from { transform: scale(0.3); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+/* Indicateur de score qui s'envole */
+.popup-score {
+    position: absolute;
+    color: #ffcc44;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Rajdhani', sans-serif;
+    pointer-events: none;
+    z-index: 5;
+    animation: popupVole 0.7s ease-out forwards;
+    text-shadow: 0 0 6px rgba(0,0,0,0.8);
+}
+
+.popup-score.tete { color: #ff6600; font-size: 22px; }
+.popup-score.miss { color: #cc3333; }
+
+@keyframes popupVole {
+    from { transform: translateY(0);    opacity: 1; }
+    to   { transform: translateY(-40px); opacity: 0; }
+}
+
+.game-result {
+    background: #222;
+    border: 1px solid #444;
+    border-top: 3px solid #f0a500;
+    border-radius: 6px;
+    padding: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.game-result h2 {
+    color: #f0a500;
+    border: none;
+    font-size: 28pt;
+    margin: 0 0 20px;
+}
+
+.resultats-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.resultat-box {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.resultat-label {
+    font-size: 11px;
+    color: #888;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.resultat-val {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f0a500;
+    margin-top: 4px;
+}
+
+.save-status {
+    margin: 20px 0;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.save-status.succes {
+    background: rgba(90,158,77,0.15);
+    border: 1px solid rgba(90,158,77,0.4);
+    color: #a0d48a;
+}
+
+.save-status.warn {
+    background: rgba(240,165,0,0.15);
+    border: 1px solid rgba(240,165,0,0.4);
+    color: #ffcc44;
+}
+
+.save-status.info {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #888;
+}
+
+.boutons-resultat {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.hidden { display: none !important; }
+
+/* ============================================== */
+/* ============= CLASSEMENT ===================== */
+/* ============================================== */
+
+.tri-buttons {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.tri-btn {
+    background: #222;
+    border: 1px solid #444;
+    color: #aaa;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tri-btn:hover {
+    border-color: #f0a500;
+    color: #f0a500;
+}
+
+.tri-btn.actif {
+    background: #f0a500;
+    color: #111;
+    border-color: #f0a500;
+}
+
+/* Podium top 3 */
+.podium {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 14px;
+    align-items: end;
+    margin: 30px 0;
+}
+
+.podium-place {
+    background: #222;
+    border-radius: 6px 6px 0 0;
+    padding: 20px 16px 24px;
+    text-align: center;
+    border: 1px solid #444;
+    border-bottom: none;
+    position: relative;
+}
+
+.podium-place.or {
+    background: linear-gradient(180deg, #443322 0%, #222 60%);
+    border-top: 4px solid #ffd700;
+    height: 220px;
+    order: 2;
+}
+
+.podium-place.argent {
+    background: linear-gradient(180deg, #333344 0%, #222 60%);
+    border-top: 4px solid #c0c0c0;
+    height: 180px;
+    order: 1;
+}
+
+.podium-place.bronze {
+    background: linear-gradient(180deg, #332218 0%, #222 60%);
+    border-top: 4px solid #cd7f32;
+    height: 150px;
+    order: 3;
+}
+
+.podium-medaille {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.podium-pseudo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f0a500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    word-break: break-word;
+}
+
+.podium-stat {
+    font-size: 14px;
+    color: #aaa;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.podium-stat-val {
+    color: #ffcc44;
+    font-weight: 700;
+}
+
+.classement-vide {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+    background: #1a1a1a;
+    border: 1px dashed #333;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.row-actuel {
+    background: rgba(240,165,0,0.1) !important;
+    border-left: 3px solid #f0a500;
+}
+
+.classement-rang {
+    color: #f0a500;
+    font-weight: 700;
+    font-family: 'Share Tech Mono', monospace;
+}

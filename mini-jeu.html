@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Strike - Aim Trainer</title>
+    <link rel="stylesheet" href="style_cs.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-cs">CS2</div>
+        <div>
+            <h1>Counter-Strike 2</h1>
+            <p>// Aim Trainer — Teste ton skill</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="page2.html">Les Armes</a></li>
+            <li><a href="page3.html">Les Maps</a></li>
+            <li><a href="mini-jeu.html" class="actif">Aim Trainer</a></li>
+            <li><a href="classement.html">Classement</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.counter-strike.net/fr/" target="_blank">Site Officiel</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenu" style="max-width: 960px;">
+
+        <h1>Aim Trainer CS2</h1>
+
+        <p>
+            Bienvenue dans l'aim trainer du site ! Tu as <strong>30 secondes</strong> pour
+            cliquer sur un maximum de cibles. Vise la <strong>tête (orange)</strong> pour
+            <strong>+25 points</strong>, le corps (rouge) pour <strong>+10 points</strong>.
+            Enchaîne les hits sans rater pour augmenter ton multiplicateur de combo
+            (<strong>x1.5</strong> tous les 5 hits, <strong>x2</strong> à 10 hits...).
+        </p>
+
+        <p>
+            <strong>⚠ Connecte-toi avant de jouer</strong> pour que ton score apparaisse
+            sur le <a href="classement.html">classement</a> !
+        </p>
+
+        <!-- HUD du jeu -->
+        <div class="game-info">
+            <div class="game-info-box">
+                <div class="game-info-label">Score</div>
+                <div class="game-info-val" id="game-score">0</div>
+            </div>
+            <div class="game-info-box">
+                <div class="game-info-label">Temps</div>
+                <div class="game-info-val" id="game-time">30</div>
+            </div>
+            <div class="game-info-box">
+                <div class="game-info-label">Combo</div>
+                <div class="game-info-val" id="game-combo">x1.0</div>
+            </div>
+            <div class="game-info-box">
+                <div class="game-info-label">Précision</div>
+                <div class="game-info-val" id="game-precision">100%</div>
+            </div>
+        </div>
+
+        <!-- Zone de jeu -->
+        <div id="game-area" class="game-area">
+            <div class="game-overlay" id="game-overlay">
+                <h2>AIM TRAINER</h2>
+                <p>
+                    Clique sur les cibles avant qu'elles disparaissent.<br>
+                    Tête = bonus, combo = multiplicateur de score.<br>
+                    Le rythme s'accélère à mesure que le temps passe.
+                </p>
+                <button class="btn-game" onclick="demarrerJeu()">DEMARRER LA PARTIE</button>
+            </div>
+        </div>
+
+        <!-- Résultats -->
+        <div id="game-result" class="game-result hidden">
+            <h2>FIN DE PARTIE</h2>
+
+            <div class="resultats-stats">
+                <div class="resultat-box">
+                    <div class="resultat-label">Score final</div>
+                    <div class="resultat-val" id="final-score">0</div>
+                </div>
+                <div class="resultat-box">
+                    <div class="resultat-label">Précision</div>
+                    <div class="resultat-val" id="final-precision">0%</div>
+                </div>
+                <div class="resultat-box">
+                    <div class="resultat-label">Meilleur combo</div>
+                    <div class="resultat-val" id="final-combo">x0</div>
+                </div>
+            </div>
+
+            <div class="save-status info" id="save-status">—</div>
+
+            <div class="boutons-resultat">
+                <button class="btn-game" onclick="rejouerJeu()">REJOUER</button>
+                <a href="classement.html" class="btn-game secondaire" style="text-decoration: none; display: inline-block;">VOIR LE CLASSEMENT</a>
+            </div>
+        </div>
+
+        <h2>Comment scorer un max ?</h2>
+        <ul style="color: #c8b98a; line-height: 1.8;">
+            <li><strong>Headshots</strong> : la tête vaut 2.5x plus que le corps. Vise toujours la zone orange.</li>
+            <li><strong>Combo</strong> : ne rate pas. Un clic dans le vide reset ton combo à zéro.</li>
+            <li><strong>Tempo</strong> : les cibles disparaissent vite, surtout en fin de partie.</li>
+            <li><strong>Mouvement</strong> : la souris doit déjà être proche de la cible avant qu'elle apparaisse.</li>
+        </ul>
+
+    </div>
+
+    <footer>
+        <p>Site réalisé dans le cadre du cours de NSI — 1ère | Counter-Strike 2 © Valve Corporation</p>
+    </footer>
+
+    <script src="fonctions.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Strike - Contact</title>
+    <link rel="stylesheet" href="style_cs.css">
+    <style>
+        .contact-container { max-width: 600px; margin: 40px auto; padding: 0 20px; }
+        .contact-box {
+            background: #222; border: 1px solid #444; border-top: 3px solid #f0a500;
+            border-radius: 6px; padding: 30px; margin-bottom: 24px;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 12px;
+            font-family: 'Share Tech Mono', monospace; color: #888;
+            letter-spacing: 1px; text-transform: uppercase; margin-bottom: 7px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; background: #1a1a1a; border: 1px solid #444; border-radius: 4px;
+            padding: 10px 14px; color: #d4c9a8;
+            font-family: 'Rajdhani', sans-serif; font-size: 15px;
+            box-sizing: border-box; outline: none; transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus { border-color: #f0a500; }
+        .form-group textarea { resize: vertical; min-height: 130px; }
+        .form-group select option { background: #1a1a1a; color: #d4c9a8; }
+        .btn-envoyer {
+            width: 100%; background: #f0a500; color: #111;
+            border: none; border-radius: 4px; padding: 13px;
+            font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 15px;
+            letter-spacing: 2px; text-transform: uppercase;
+            cursor: pointer; transition: background 0.2s;
+        }
+        .btn-envoyer:hover { background: #e8c96d; }
+        .msg-succes {
+            display: none;
+            background: rgba(90,158,77,0.15);
+            border: 1px solid rgba(90,158,77,0.4);
+            border-radius: 4px; padding: 14px;
+            color: #a0d48a; font-size: 14px;
+            margin-bottom: 20px; text-align: center;
+        }
+        .infos-contact {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 14px; margin-top: 24px;
+        }
+        .info-carte {
+            background: #222; border: 1px solid #444;
+            border-left: 3px solid #f0a500;
+            border-radius: 4px; padding: 16px;
+        }
+        .info-carte .info-titre {
+            font-size: 11px; font-family: 'Share Tech Mono', monospace;
+            color: #888; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 6px;
+        }
+        .info-carte .info-val { font-size: 15px; font-weight: 600; color: #f0a500; }
+        .info-carte .info-desc { font-size: 12px; color: #666; margin-top: 3px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-cs">CS2</div>
+        <div>
+            <h1>Counter-Strike 2</h1>
+            <p>// Nous contacter</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="page2.html">Les Armes</a></li>
+            <li><a href="page3.html">Les Maps</a></li>
+            <li><a href="mini-jeu.html">Aim Trainer</a></li>
+            <li><a href="classement.html">Classement</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html" class="actif">Contact</a></li>
+            <li><a href="https://www.counter-strike.net/fr/" target="_blank">Site Officiel</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-container">
+
+        <h1>Nous contacter</h1>
+        <p>Une question sur le site, une erreur à signaler, ou juste envie de parler CS2 ? Envoie-nous un message !</p>
+
+        <div class="msg-succes" id="msg-succes">
+            ✅ Message envoyé ! On te répondra dès que possible. GG !
+        </div>
+
+        <div class="contact-box">
+
+            <div class="form-group">
+                <label>Ton pseudo</label>
+                <input type="text" id="pseudo" placeholder="ex : s1mple_fan">
+            </div>
+
+            <div class="form-group">
+                <label>Ton email</label>
+                <input type="email" id="email" placeholder="ton@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Sujet</label>
+                <select id="sujet">
+                    <option value="">-- Choisir un sujet --</option>
+                    <option value="erreur">Signaler une erreur sur le site</option>
+                    <option value="suggestion">Suggérer du contenu</option>
+                    <option value="question">Poser une question sur CS2</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea id="message" placeholder="Écris ton message ici..."></textarea>
+            </div>
+
+            <button class="btn-envoyer" onclick="envoyerMessage()">Envoyer le message</button>
+
+        </div>
+
+        <h2>Infos utiles</h2>
+        <div class="infos-contact">
+            <div class="info-carte">
+                <div class="info-titre">Projet</div>
+                <div class="info-val">Site NSI</div>
+                <div class="info-desc">Réalisé en 1ère NSI</div>
+            </div>
+            <div class="info-carte">
+                <div class="info-titre">Réponse sous</div>
+                <div class="info-val">24-48h</div>
+                <div class="info-desc">En dehors des weekends</div>
+            </div>
+            <div class="info-carte">
+                <div class="info-titre">Jeu</div>
+                <div class="info-val">Counter-Strike 2</div>
+                <div class="info-desc">Développé par Valve</div>
+            </div>
+            <div class="info-carte">
+                <div class="info-titre">Site officiel</div>
+                <div class="info-val"><a href="https://www.counter-strike.net/fr/">counter-strike.net</a></div>
+                <div class="info-desc">Pour toute question sur le jeu</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Site réalisé dans le cadre du cours de NSI — 1ère | Counter-Strike 2 © Valve Corporation</p>
+    </footer>
+
+    <script src="fonctions.js"></script>
+</body>
+</html>

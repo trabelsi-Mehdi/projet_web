@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter-Strike - Classement</title>
+    <link rel="stylesheet" href="style_cs.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-cs">CS2</div>
+        <div>
+            <h1>Counter-Strike 2</h1>
+            <p>// Classement des joueurs</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="page2.html">Les Armes</a></li>
+            <li><a href="page3.html">Les Maps</a></li>
+            <li><a href="mini-jeu.html">Aim Trainer</a></li>
+            <li><a href="classement.html" class="actif">Classement</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.counter-strike.net/fr/" target="_blank">Site Officiel</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenu" style="max-width: 960px;">
+
+        <h1>Classement des joueurs</h1>
+
+        <p>
+            Retrouve ici le classement des joueurs inscrits sur le site, triable par
+            <strong>aim score</strong>, <strong>victoires</strong>, <strong>K/D ratio</strong> ou
+            <strong>parties jouées</strong>. Crée un compte sur la page
+            <a href="connexion.html">Connexion</a> pour apparaître ici, puis joue à l'
+            <a href="mini-jeu.html">Aim Trainer</a> pour booster ton aim score.
+        </p>
+
+        <!-- Boutons de tri -->
+        <div class="tri-buttons">
+            <button class="tri-btn actif" data-tri="aim_score" onclick="changerTri('aim_score')">🎯 Aim Score</button>
+            <button class="tri-btn"        data-tri="wins"     onclick="changerTri('wins')">🏆 Victoires</button>
+            <button class="tri-btn"        data-tri="kd"       onclick="changerTri('kd')">⚔ K/D Ratio</button>
+            <button class="tri-btn"        data-tri="parties"  onclick="changerTri('parties')">🎮 Parties</button>
+        </div>
+
+        <h2>Top 3 — <span id="critere-actuel">Aim Score</span></h2>
+
+        <!-- Podium -->
+        <div class="podium" id="podium"></div>
+
+        <!-- Message si vide -->
+        <div class="classement-vide hidden" id="classement-vide">
+            Aucun joueur inscrit pour le moment.<br>
+            <a href="connexion.html">Inscris-toi</a> pour être le premier sur le classement !
+        </div>
+
+        <h2>Classement complet</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Pseudo</th>
+                    <th>Parties</th>
+                    <th>Wins</th>
+                    <th>K/D</th>
+                    <th>Aim Score</th>
+                </tr>
+            </thead>
+            <tbody id="classement-body"></tbody>
+        </table>
+
+        <p style="margin-top: 30px;">
+            <a href="mini-jeu.html">→ Lancer une partie d'Aim Trainer</a> |
+            <a href="connexion.html">→ Voir mon profil</a>
+        </p>
+
+    </div>
+
+    <footer>
+        <p>Site réalisé dans le cadre du cours de NSI — 1ère | Counter-Strike 2 © Valve Corporation</p>
+    </footer>
+
+    <script src="fonctions.js"></script>
+</body>
+</html>
